@@ -81,7 +81,10 @@ export class CamelJBangTaskProvider implements TaskProvider {
 				'jbang',
 				[
 					{
-						"value": `-Dcamel.jbang.version=${this.getCamelJBangCLIVersion()}`,
+						// "value": `-Dcamel.jbang.version=${this.getCamelJBangCLIVersion()}`,
+						// it can be switched back after bump to default version Camel JBang 4.8.1
+						// the 4.9.0-SNAPSHOT version will be used only for deploy feature
+						"value": `-Dcamel.jbang.version=4.9.0-SNAPSHOT`,
 						"quoting": ShellQuoting.Strong
 					},
 					'camel@apache/camel',
